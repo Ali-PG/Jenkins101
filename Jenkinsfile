@@ -1,4 +1,3 @@
-//dmakd
 pipeline {
     agent { 
         node {
