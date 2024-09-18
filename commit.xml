@@ -2,7 +2,10 @@
 
     <target name="commit">
         <!-- Change to the Git repository directory -->
-		
+
+	<exec executable="git"> 
+	    <arg line="checkout -b ${BRANCH_NAME}" />
+	</exec>
 		
         <exec executable="git" dir=".">
             <arg line="add ."/> <!-- Stage all changes -->
