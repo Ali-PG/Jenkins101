@@ -1,0 +1,15 @@
+<project name="GitCommit" default="commit" basedir=".">
+
+    <target name="commit">
+        <!-- Change to the Git repository directory -->
+		
+		
+        <exec executable="git" dir=".">
+            <arg line="add ."/> <!-- Stage all changes -->
+        </exec>
+
+        <exec executable="git" dir=".">
+            <arg line="commit -m '${commit.message}'"/> <!-- Commit changes -->
+        </exec>
+    </target>
+</project>
